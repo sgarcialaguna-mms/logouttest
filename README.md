@@ -15,4 +15,6 @@ Note that I enabled caching for the logout page within Django, in production, th
 This bug did not occur with Django 1.6. I believe the bug was introduced with commit https://github.com/django/django/commit/393c0e24223c701edeb8ce7dc9d0f852f0c081ad,
 as previously Vary: Cookie header was set and so the logout page wouldn't be cached.
 
+In production, we worked around this issue by setting the never_cache() decorator on the logout view.
+
 Additionally, the call to delete_cookie() should set the cookie path in case settings.COOKIE_PATH is not '/'.
