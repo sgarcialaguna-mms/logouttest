@@ -3,11 +3,11 @@ Demonstrate a possible bug in Django.
 
 To reproduce:
 
-Make sure your browser isn't set to disable cache (e.g. when Chrome DevTools are open)
-Log in with admin/admin.
-Log out.
-Log in again.
-Log out again.
+Make sure your browser isn't set to disable cache (e.g. when Chrome DevTools are open)<br>
+Log in with admin/admin.<br>
+Log out.<br>
+Log in again.<br>
+Log out again.<br>
 => Homepage still says "You are logged in as admin"
 
 Note that I enabled caching for the logout page within Django, in production, the caching is configured within Apache.
